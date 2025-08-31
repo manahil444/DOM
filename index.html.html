@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Website</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+nav {
+    background-color: rgb(102, 188, 223);
+    /* padding: 1rem 2rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 0, 105);
+    padding-right: 10px;
+}
+/* .navlogo{
+    width: 10%;
+    height: 15%;
+} */
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #edecf1;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 105);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+.nav-links a:hover {
+    color: rgb(0, 0, 105);
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.img1{
+    width: 90%;
+    height: 450px;
+    background-color: black;
+    border-radius: 30px;
+    margin-left: 70px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px 5px skyblue;
+    border: 5px solid white;
+}
+.main{
+    width: 90%;
+    height: 250px;
+    margin-left: 6%;
+    margin-top: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;  
+}
+#b1{
+    background-image: linear-gradient(rgb(121, 224, 121),white,rgb(121, 224, 121));
+    border-top: 3px solid rgb(59, 223, 59);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(59, 223, 59);
+    box-shadow: 5px 5px 15px 5px rgb(59, 223, 59);
+    text-align: center;
+    /* opacity: 0.5; */
+}
+#b2{
+    background-image: linear-gradient(skyblue,white,skyblue);
+    border-top: 3px solid rgb(53, 198, 255);
+    border-right: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(53, 198, 255);
+    box-shadow: 5px 5px 15px 5px rgb(53, 198, 255);
+    text-align: center;
+    /* opacity: 0.7; */
+}
+#b3{
+    background-image: linear-gradient(rgb(230, 159, 230),white,rgb(230, 159, 230));
+    border-top: 3px solid rgb(138, 42, 138);
+    border-right: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(138, 42, 138);
+    box-shadow: 5px 5px 15px 5px rgb(138, 42, 138);
+    text-align: center;
+    /* opacity: 0.6; */
+}
+.logo1{
+    opacity: 1px;
+    width: 70px;
+    margin-top: 80px;
+}
+.s1{
+    color: rgb(0, 0, 146);
+    font-size: 30px;
+    font-weight: bolder; 
+    font-family:sans-serif;
+}
+.s2{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:sans-serif;
+}
+.logo2{
+    opacity: 1px;
+    width: 70px;
+    margin-top: 80px;
+}
+.logo3{
+    opacity: 1px;
+    width: 70px;
+    margin-top: 80px;
+}
+.main5{
+    width: 90%;
+    height: 330px;
+    background-color: white;
+    border: 6px solid blue;
+    margin-left: 5%;
+    border-radius: 20px;
+    box-shadow: -5px 5px 5px 10px skyblue;
+    padding: 10px;
+    display: flex;
+}
+.main6{
+    width: 100%;
+    height: 270px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 5%;
+    text-align: center;
+    padding-top: 60px;
+}
+.logo4{
+    margin-top: 50px;
+}
+.main7{
+    display: inline-block;
+}
+.s3{
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+.s4{
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+}
+.main8{
+    width: 50%;
+    height: 25%;
+    background-color: blue;
+    margin-top: 20px;
+    margin-left: 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex ;
+}
+.s5{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main9{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(237, 243, 241);
+}
+.main10{
+    text-align: center;
+    padding-top: 5%;
+}
+.sp1{
+    color: black;
+    font-size: 42px;
+    font-weight: bold;
+}
+.sp2{
+    color: blue;
+    font-size: 42px;
+    font-weight: bold;
+}
+.main11{
+    display: flex;
+    gap: 120px;
+    padding-left: 70px;
+}
+/* .pic{
+    width: 300px;
+    height: 350px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px; 
+    background-color: aquamarine;
+} */
+#d1{
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px skyblue;
+    border: 4px solid blue;
+}
+#d2{
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px skyblue;
+    border: 4px solid blue;
+}
+#d3{
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px skyblue;
+    border: 4px solid blue;
+}
+#d4{
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px skyblue;
+    border: 4px solid blue;
+}
+.main12{
+    width: 96%;
+    /* height: 100px; */
+    margin-left: 2%;
+    /* margin-top: 100px; */
+    background-color: rgb(237, 243, 241);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    width: 10%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgb(48, 178, 230);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(48, 178, 230);
+    font-size: 15px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.main13{
+    text-align: center;
+}
+.main14{
+    width: 96%;
+    height: 120px;
+    margin-left: 2%;
+    margin-top: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.pic1{
+    height: 140px;
+}
+.marquee-wrapper {
+        overflow: hidden;
+        white-space: nowrap;
+        background: #fff;
+        padding: 10px 0;
+    }
+
+    .marquee {
+        display: inline-block;
+        animation: scroll-left 8s linear infinite;
+    }
+
+ .marquee img {
+        height: 60px;
+        margin: 0 30px;
+        vertical-align: middle;
+    }
+.slider {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+.slider h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+.slider h1 span {
+  color: #4472C4;
+}
+
+.swiper-slide {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+  padding: 20px;
+  
+}
+.swiper-slide img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+.main17{
+    width: 90%;
+    height: 290px;
+    background-color: #e6e2e2;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 40px;
+}
+.main18{
+    width: 80%;
+    height: 80px;
+    margin-left: 10%;
+    display: flex;
+}
+.main19{
+    width: 20%;
+    height: 80px;
+    padding-left: 10%;
+}
+.main20{
+    width: 55%;
+    height: 50px;
+    padding-top: 30px;
+    padding-left: 15%;
+    font-size: 20px;
+}
+.main21{
+    width: 20%;
+    height: 80px;
+    padding-left: 10%;
+}
+.main22{
+    width: 55%;
+    height: 50px;
+    padding-top: 30px;
+    padding-left: 15%;
+    font-size: 20px;
+}
+.main23{
+    width: 20%;
+    height: 80px;
+    padding-left: 10%;
+}
+.main24{
+    width: 55%;
+    height: 50px;
+    padding-top: 30px;
+    padding-left: 15%;
+    font-size: 20px;
+}
+.main25{
+    width: 100%;
+    height: 300px;
+    background-color: #e6e2e2 ;
+    display: flex;
+}
+.main26{
+    width: 60%;
+    height: 300px;
+}
+.main27{
+    width: 30%;
+    height: 270px;
+    padding-top: 30px;
+    padding-left: 10%;
+}
+.main28{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+#t1{
+    padding-top: 30px;
+    height: 70px;
+    font-size: 52px;
+    color: blue;
+}
+#t2{
+    font-size: 30px;
+}
+#t3{
+    font-size: 20px;
+    color: #888282;
+}
+.container_1{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+</style>
+<body>
+    
+    <nav>
+    <div class="logo">
+        <img src="image/viber_image_2025-05-13_22-00-51-747.png" alt="" height="15%" width="15%">
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <div class="img1">
+    <img src="c:\Users\PC\Downloads\Screenshot_2-8-2025_84241_playgress.infinityfreeapp.com.jpeg" alt="">
+  </div>
+  <div class="main">
+        <div class="box" id="b1">
+            <img class="logo1" src="image/Tryyyy-new.svg" alt="">
+            <br>
+            <span class="s1">Book via</span>
+            <br>
+            <span class="s2">Watsapp</span>
+        </div>
+        <div class="box" id="b2">
+            <img class="logo2" src="image/Tryyyy-rtyjhrtj.svg" alt="">
+            <br>
+            <span class="s1">Book via</span>
+            <br>
+            <span class="s2">Call</span>
+        </div>
+        <div class="box" id="b3">
+            <img class="logo3" src="image/Tryyyy-rtyjhrtjtykmtyumtyu.svg" alt="">
+            <br>
+            <span class="s1">Get instant</span>
+            <br>
+            <span class="s2">Call</span>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="main5">
+        <div class="main6">
+        <span class="s3">Why Choose</span>
+        <br>
+        <span class="s4">Trust Report</span>
+        <div class="main8">
+            <img src="c:\Users\PC\Downloads\Screenshot_2-8-2025_223039_playgress.infinityfreeapp.com.jpeg" alt="" width="100%" height="100%">
+        </div>
+        <span class="s5">(83490 Ratings)</span>
+        </div>
+        <div class="main17">
+            <div class="main18">
+                <div class="main19"><img src="image/download.png" alt="" width="70px" height="70px"></div>
+                <div class="main20">Lowest Price Guarented</div>
+            </div>
+            <div class="main18">
+                <div class="main21"><img src="image/download (1).png" alt="" width="70px" height="70px"></div>
+                <div class="main22">100% Certified Labs</div>
+            </div>
+            <div class="main18">
+                <div class="main23"><img src="image/download (2).png" alt="" width="70px" height="70px"></div>
+                <div class="main24">24/7 Customer Service</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="main9">
+        <div class="main10">
+            <span class="sp1">Health Scans and <span class="sp2">Imaging</span> Tests</span>
+        </div>
+        <br>
+        <br>
+        <div class="main11">
+        <div class="pic" id="d1">
+            <img src="image/pko.jpg" alt="" width="200px" height="200px">
+        </div>
+        <div class="pic" id="d2">
+            <img src="image/victoria-memori-01.png" alt="" width="200px" height="200px">
+        </div>
+        <div class="pic" id="d3">
+            <img src="image/victoria-memorial-01.png" alt="" width="200px" height="200px">
+        </div>
+        <div class="pic" id="d4">
+            <img src="image/victoria-memorialdg-01.png" alt="" width="200px" height="200px">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="main12">
+        <button><a href="https://playgress.infinityfreeapp.com/">Book now</a></button>
+        <button><a href="https://playgress.infinityfreeapp.com/">Book now</a></button>
+        <button><a href="https://playgress.infinityfreeapp.com/">Book now</a></button>
+        <button><a href="https://playgress.infinityfreeapp.com/">Book now</a></button>
+    </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+        <center>
+        <span class="sp1">Our Service <span class="sp2">Locations</span></span>
+        </center>
+    <div class="main14">
+        <div>
+            <img class="pic1" src="image/download (3).png" alt="">
+            <br>
+            <span >Dehli</span>
+        </div>
+        <div>
+            <img class="pic1" src="image/download (4).png" alt="">
+            <br>
+            <span >Banglore</span>
+        </div>
+        <div>
+            <img class="pic1" src="image/download (5).png" alt="">
+            <br>
+            <span >Mumbai</span>
+        </div>
+        <div>
+            <img class="pic1" src="image/download (6).png" alt="">
+            <br>
+            <span >Chenai</span>
+        </div>
+        <div>
+            <img class="pic1" src="image/download (7).png" alt="">
+            <br>
+            <span >Hyderabad</span>
+        </div>
+        <div>
+            <img class="pic1" src="image/download (8).png" alt="">
+            <br>
+            <span >Gurugam</span>
+        </div>
+        <div>
+            <img class="pic1" src="image/download (9).png" alt="">
+            <br>
+            <span >Kolkata</span>
+        </div>
+    </div> 
+    </div> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="main15">
+        <center>
+        <span class="sp1">Our Partner <span class="sp2">Center</span></span>
+        </center>
+        <br>
+        <br>
+        <br>
+        <div class="marquee-wrapper">
+        <div class="marquee">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/5y45t.png" alt="" class="mar" height="300px">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/fvsdv.png" alt="" class="mar_1" height="300px">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/gthert.png" alt="" class="mar_2" height="300px">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/Untitled-2.png" alt="" class="mar_3" height="300px">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/ykrj.png" alt="" class="mar_4" height="300px">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/PC-Diagnostics.png" alt="" class="mar_5" height="300px">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/LOGO.jpg" alt="" class="mar_6" height="300px">
+            <!-- Repeat same logos for seamless scroll -->
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/5y45t.png" alt="" class="mar">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/fvsdv.png" alt="" class="mar_1">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/gthert.png" alt="" class="mar_2">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/Untitled-2.png" alt="" class="mar_3">
+            <img src="http://playgress.infinityfreeapp.com/wp-content/uploads/2025/05/ykrj.png" alt="" class="mar_4">
+        </div>
+    </div>   
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="main25">
+        <div class="main26">
+            <div class="main28" id="t1">NABL Acceredited Labs*</div>
+            <div class="main28" id="t2">Quality diagnostics you can rely on</div>
+            <div class="main28" id="t3">*Refer to Lab-specific NABL Scope for acceredited parameters</div>
+        </div>
+        <div class="main27"><img src="image/0-02-05-f171ffb223189ce9cdbd77ccb5819fa920a002b11583b0e37366045389bbdd2b_b1e1dc967c01a2e7.png" alt="" width="200px" height="250px"></div>
+    </div>
+</body>
+</html>
