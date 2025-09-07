@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1200" />
+  <title>VoyagePro — Professional Travel Experiences</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP (Animations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- App -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <a class="brand" href="#">VoyagePro</a>
+
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle theme"><i
+            class="fa-solid fa-moon"></i></button>
+        <button id="bookTopBtn" class="btn btn-primary">Book Now</button>
+        <button id="navToggle" class="icon-btn nav-toggle" aria-label="Open menu"><i
+            class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Curated Travel. Real Experiences.</h1>
+          <p class="lead">Luxury & budget packages, local guides, and flexible booking — crafted for modern explorers.
+          </p>
+
+          <form id="searchForm" class="search-form" aria-label="Search packages">
+            <input id="searchInput" type="search" placeholder="Search destination, activity or keyword" />
+            <select id="duration" aria-label="Duration">
+              <option value="">Any duration</option>
+              <option value="3">Up to 3 days</option>
+              <option value="5">Up to 5 days</option>
+              <option value="7">7+ days</option>
+            </select>
+            <button class="btn">Search</button>
+          </form>
+
+          <div class="hero-stats" aria-hidden="true">
+            <div><strong id="statTrips">0</strong><span>Trips</span></div>
+            <div><strong id="statCountries">0</strong><span>Countries</span></div>
+            <div><strong id="statClients">0</strong><span>Happy Clients</span></div>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <div class="media-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+              alt="Tropical beach" />
+            <div class="media-overlay">Summer Escapes • Maldives</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="section">
+      <div class="container section-header">
+        <h2>Featured Packages</h2>
+        <p class="muted">Handpicked, fully-bookable packages — click Book to try the demo booking flow.</p>
+
+        <div class="controls">
+          <label>Sort:
+            <select id="sortBy" aria-label="Sort packages">
+              <option value="popular">Most popular</option>
+              <option value="priceAsc">Price: low → high</option>
+              <option value="priceDesc">Price: high → low</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="container grid" id="packagesGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="section alt">
+      <div class="container">
+        <h2>Top Destinations</h2>
+        <div class="grid small-grid">
+          <article class="tile"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=900"
+              alt="">
+            <h3>Swiss Alps</h3>
+          </article>
+          <article class="tile"><img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=900" alt="">
+            <h3>Tokyo</h3>
+          </article>
+          <article class="tile"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=900"
+              alt="">
+            <h3>Istanbul</h3>
+          </article>
+          <article class="tile"><img src="https://images.unsplash.com/photo-1518684079-2ca0f1d9d6b9?q=80&w=900" alt="">
+            <h3>Kenya Safari</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <h2>About VoyagePro</h2>
+          <p>We design stress-free trips with vetted partners, transparent pricing, and 24/7 support. From family trips
+            to remote adventures — we plan with care.</p>
+          <ul class="checklist">
+            <li>Flexible booking & fair policies</li>
+            <li>Local guides & vetted partners</li>
+            <li>Carbon-offset travel options</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900" alt="Guide" />
+          <div class="about-cta">
+            <h3>Ready to travel?</h3>
+            <button id="startBooking" class="btn btn-primary">Start Booking</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" class="contact-form" aria-label="Contact form">
+          <div class="form-row">
+            <input id="contactName" type="text" placeholder="Your name" required>
+            <input id="contactEmail" type="email" placeholder="Your email" required>
+          </div>
+          <textarea id="contactMessage" placeholder="How can we help?" rows="4" required></textarea>
+          <div class="form-row right">
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> VoyagePro</div>
+      <div class="socials" aria-hidden="true">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="bookingTitle">
+    <div class="modal-panel">
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+      <h3 id="bookingTitle">Book Package</h3>
+      <form id="bookingForm" class="modal-form">
+        <label>Package <input id="modalPkg" type="text" readonly></label>
+        <div class="form-row">
+          <label>Travelers <input id="modalTravellers" type="number" min="1" value="1" required></label>
+          <label>Start Date <input id="modalDate" type="date" required></label>
+        </div>
+        <label>Notes <textarea id="modalNotes" rows="3"></textarea></label>
+        <div class="form-row right">
+          <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
